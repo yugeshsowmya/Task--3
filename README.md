@@ -1,9 +1,14 @@
 # Task--3
 Basic Vulnerability Scan on Your PC
 Task 3 — Vulnerability Scan Using Nmap
-
 This task involves performing a basic vulnerability scan on my personal laptop using Nmap, documenting the findings, and providing remediation suggestions.
 Since I was unable to install Nessus Essentials and OpenVAS, I used Nmap vulnerability scripts as an alternative, which is acceptable for the internship assignment.
+**Summary**
+This repository contains the results of a basic vulnerability scan performed on my personal laptop using Nmap. The goal was to identify open ports and potential issues and suggest remediations.
+**Prerequisites**
+- Nmap installed
+- Windows machine
+
 **1. System Details**
 - **Local IP Address:** 192.168.31.118  
 - **Operating System:** Windows  
@@ -14,23 +19,23 @@ Since I was unable to install Nessus Essentials and OpenVAS, I used Nmap vulnera
   - Full TCP Port Scan  
   - Vulnerability Scan using NSE scripts
 **2. Commands Used**
-Find IP Address
+Find IP Address:
          ipconfig
-Host Discovery
+Host Discovery:
          nmap -sn 192.168.31.118
-Quick Top‑Ports Scan
+Quick Top‑Ports Scan:
          nmap -sS -sV --top-ports 100 -T4 -oN quickscan.txt 192.168.31.118
-Full TCP Port Scan (All Ports)
+Full TCP Port Scan (All Ports):
          nmap -p- -sS -sV -O -T4 -oA fullscan 192.168.31.118
-Vulnerability Scan (NSE vuln scripts)
+Vulnerability Scan (NSE vuln scripts):
          nmap -sV --script vuln -oN vulnscan.txt 192.168.31.118
 **3.Screenshots**
 All screenshots are included in this repository:
-  IP Discovery
-  Host Discovery
-  Quick Scan
-  Full TCP Scan
-  Vulnerability Scan
+  IP Discovery - "ip_aqddress.png"
+  Host Discovery -"Host_discovery.png"
+  Quick Scan - "quickscan.txt"
+  Full TCP Scan - "fullscan.png","fullscan.nmap", "fullscan.gnmap","fullscan.html"
+  Vulnerability Scan - "vulnscan.txt","Vulnerability_scan.png"
 **4.Analysis and Findings**
 Open Ports Identified:
     Port	        Service	        Description
